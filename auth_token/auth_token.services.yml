@@ -1,0 +1,13 @@
+services:
+  auth_token.page_cache_request_policy.deny_page_cache_having_auth_token:
+    class: Drupal\auth_token\requestPolicy\AuthTokenRequestPolicy
+    tags:
+      - { name: page_cache_request_policy }
+  auth_token.page_cache_response_policy.deny_page_cache_having_auth_token:
+    class: Drupal\auth_token\responsePolicy\AuthTokenResponsePolicy
+    tags:
+      - { name: page_cache_response_policy }
+  auth_token.authtoken.middleware:
+    class: Drupal\auth_token\AuthTokenMiddleware
+    tags:
+      - { name: http_middleware, priority: 20 }

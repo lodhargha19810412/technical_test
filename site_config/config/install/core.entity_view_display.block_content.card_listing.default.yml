@@ -1,0 +1,25 @@
+uuid: 01d9d48e-387d-4119-9a86-bd4615bea9a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card_listing
+    - field.field.block_content.card_listing.field_cards
+  module:
+    - entity_reference_revisions
+id: block_content.card_listing.default
+targetEntityType: block_content
+bundle: card_listing
+mode: default
+content:
+  field_cards:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

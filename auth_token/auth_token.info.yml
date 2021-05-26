@@ -1,0 +1,8 @@
+name: Auth Token
+type: module
+description: "This module generate the auth token during the user insert and allow the user to login with the Auth token passing by query string"
+package: Auth Token
+dependencies:
+  - drupal:user
+version: VERSION
+core_version_requirement: ^8.8 || ^9

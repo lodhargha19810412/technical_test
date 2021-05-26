@@ -1,0 +1,8 @@
+uuid: 26f7e2a3-3791-41ba-b9bb-aeffe719bfaa
+langcode: en
+status: true
+dependencies: {  }
+id: card_listing
+label: 'Card Listing'
+revision: 0
+description: ''

@@ -1,0 +1,11 @@
+name: Site Content Config
+type: module
+description: "This module will allow user to set the conetnt with Layout builder and Paragraphs"
+package: Site Content Config
+dependencies:
+  - drupal:paragraphs
+  - drupal:layout_builder
+  - drupal:media_library
+  - drupal:link_class
+version: VERSION
+core_version_requirement: ^9

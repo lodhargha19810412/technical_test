@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Install hook for the auth token module.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function auth_token_install() {
+  
+  $userStorage = \Drupal::service('entity_type.manager')->getStorage('user');
+  $users = $userStorage->loadMultiple();
+  foreach($users as $user) {
+	  $userName = $user->getAccountName();
+	  $token = md5(uniqid($userName, TRUE));
+	  $user->set("field_auth_token", $token);
+	  $user->save();
+	  
+  }
+  \Drupal::service('entity_type.manager')->getStorage('entity_view_display')->load("user.user.default")
+    ->setComponent("field_auth_token")
+	->save();
+  
+}

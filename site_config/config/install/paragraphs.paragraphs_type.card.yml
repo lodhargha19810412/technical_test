@@ -1,0 +1,10 @@
+uuid: 9f8822d8-7a0a-4f9e-9783-785932231455
+langcode: en
+status: true
+dependencies: {  }
+id: card
+label: Card
+icon_uuid: null
+icon_default: null
+description: 'Use to create the individual card for the card listing.'
+behavior_plugins: {  }

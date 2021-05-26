@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * This module generate the auth token during the user insert and allow the user to login with the Auth token passing by query string.
+ *
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Act on a specific type of entity before it is created or updated.
+ *
+ * You can get the original entity object from $entity->original when it is an
+ * update of the entity.
+ *
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ *   The entity object.
+ *
+ * @ingroup entity_crud
+ * @see hook_entity_presave()
+ */
+function auth_token_user_presave($user) {
+    if(!$user->id() && $user->hasField("field_auth_token")) {
+	   $userName = $user->getAccountName();
+	   $token = md5(uniqid($userName, TRUE));
+	   $user->set("field_auth_token", $token);
+    }
+  
+}
