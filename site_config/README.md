@@ -24,17 +24,16 @@ INSTALLATION
 CONFIGURATION
 -------------
 
-Configuration of Site config module involves creating one or more paragraphs and content with layout.
+Configuration of module involves below steps:
 
- 1. Go to Admin > Structure > Block Layout > Custom block library, and click "Add custom block".
-
- 2. Click on Card Listing.
-
- 3. Enter the data and save.
-
- 4. Go to Content > Add Content > Layout to create the content .
+ 1. Go to Admin > Structure > Block Layout > Custom block library.
  
- 5. Once you save the conetnt,  go to the content layout builder using content view page > Layout.
+ 2. click "Add custom block"
 
+ 3. Click on Card Listing.
 
+ 4. Enter the data and save.
 
+ 5. Go to Content > Add Content > Layout to create the content.
+ 
+ 6. Go to the content layout builder using content view page > Layout.

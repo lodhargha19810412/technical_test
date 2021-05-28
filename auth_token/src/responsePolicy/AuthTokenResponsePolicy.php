@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 /**
  * Cache policy for the Auth token.
  *
- * This policy deny fetching from caching having auth token 
+ * This policy deny fetching from caching having auth token .
  */
 class AuthTokenResponsePolicy implements ResponsePolicyInterface {
 
@@ -17,8 +17,8 @@ class AuthTokenResponsePolicy implements ResponsePolicyInterface {
    * {@inheritdoc}
    */
   public function check(Response $response, Request $request) {
-    // This method check if the authtoken having into the query string and if exists it returns deny for caching
-	$authToken = $request->query->get('authtoken');
+    // Deny to store in caching if authtoken exist in query string.
+    $authToken = $request->query->get('authtoken');
     if (!empty($authToken)) {
       return static::DENY;
     }

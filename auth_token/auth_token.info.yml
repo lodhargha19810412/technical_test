@@ -4,5 +4,4 @@ description: "This module generate the auth token during the user insert and all
 package: Auth Token
 dependencies:
   - drupal:user
-version: VERSION
 core_version_requirement: ^8.8 || ^9
